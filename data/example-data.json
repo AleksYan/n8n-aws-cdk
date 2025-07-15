@@ -1,0 +1,23 @@
+{
+  "example": {
+    "description": "This is an example data file for n8n workflows",
+    "items": [
+      {
+        "id": "item1",
+        "name": "Example Item 1",
+        "status": "active",
+        "value": 100
+      },
+      {
+        "id": "item2", 
+        "name": "Example Item 2",
+        "status": "inactive",
+        "value": 200
+      }
+    ],
+    "metadata": {
+      "created": "2025-01-01T00:00:00Z",
+      "version": "1.0"
+    }
+  }
+}

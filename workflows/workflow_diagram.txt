@@ -1,0 +1,53 @@
+Example n8n Workflow Diagram
+===========================
+
+This is an example workflow structure that can be implemented in n8n.
+
++-------------------+     +-------------------+     +-------------------+
+|                   |     |                   |     |                   |
+|  Schedule Trigger |---->|   Read Data       |---->|   Process Data    |
+|  (Configurable)   |     |   (S3/EFS/API)    |     |   (Filter/Transform)|
+|                   |     |                   |     |                   |
++-------------------+     +-------------------+     +--------+----------+
+                                                            |
+                                                            v
++-------------------+     +-------------------+     +-------------------+
+|                   |     |                   |     |                   |
+|  Send Notification|<----|  Generate Content |<----|  Match/Join Data  |
+|  (Email/SNS/HTTP) |     |  (Transform/AI)   |     |  (Business Logic) |
+|                   |     |                   |     |                   |
++-------------------+     +-------------------+     +--------+----------+
+                                                            ^
+                                                            |
+                                                    +-------+----------+
+                                                    |                  |
+                                                    |  Read Reference  |
+                                                    |  Data (S3/API)   |
+                                                    |                  |
+                                                    +------------------+
+
+Example Data Flow:
+=================
+
+1. Schedule Trigger activates workflow at defined intervals
+2. Read data from various sources (S3, APIs, databases)
+3. Process and filter data based on business logic
+4. Match/join data from multiple sources
+5. Generate content or notifications
+6. Send notifications via preferred channels
+
+AWS Services Available:
+======================
+
+- AWS EFS: For persistent file storage
+- AWS S3: For object storage and data exchange
+- AWS SNS: For sending notifications
+- AWS Lambda: For serverless functions (via HTTP requests)
+
+Customization:
+=============
+
+- Modify trigger schedule as needed
+- Add custom data sources and processing logic
+- Implement error handling and retry mechanisms
+- Configure notification channels based on requirements
