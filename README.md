@@ -13,12 +13,6 @@ The deployment consists of:
 
 ### Architecture Diagram
 
-![n8n AWS Architecture](docs/images/n8n-aws-architecture.png)
-
-*Diagram: AWS architecture for n8n deployment with secure-by-default IP access control*
-
-For a text-based representation of the architecture:
-
 ```mermaid
 graph TB
     subgraph "Internet"
