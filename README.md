@@ -233,11 +233,11 @@ New AWS accounts include free tier benefits that can reduce initial costs:
    # Deploy to a specific region (region is mandatory)
    ./deploy.sh --region us-west-2
    
-   # Deploy with allowed IP addresses
+   # Or deploy with allowed IP addresses (recommended)
    export ALLOWED_IPS="203.0.113.1,198.51.100.1"
    ./deploy.sh --region eu-west-1
    ```
-6. Add your IP address to access n8n:
+6. (Optional - only if you didn't specify IPs in step 5) Add your IP address to access n8n:
    ```bash
    # Get the security group ID from the stack outputs
    SG_ID=$(aws cloudformation describe-stacks --stack-name N8nStack --query "Stacks[0].Outputs[?OutputKey=='ALBSecurityGroupId'].OutputValue" --output text)
