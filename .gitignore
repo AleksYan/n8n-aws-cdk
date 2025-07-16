@@ -1,9 +1,12 @@
 # Python virtual environment
 .venv/
 **/__pycache__/
+*.egg-info
+*.swp
 
 # CDK output
 cdk.out/
+.cdk.staging
 cdk/.venv/
 cdk/.pytest_cache/
 
